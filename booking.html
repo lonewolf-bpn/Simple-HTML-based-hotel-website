@@ -1,0 +1,274 @@
+<html>
+<style type="text/css">
+#navbar{
+	background-color:#fb4e54;
+	height:50px;
+	width:100%;
+	
+
+	
+}
+	
+
+#con{
+	margin-left:350px;
+	text-align: center;
+}
+#navbar ul {
+list-style:none;
+top:135px;
+
+}
+#navbar ul li{
+	
+	background-color:#fb4e54;
+	height:50px;
+	text-align:center;
+	line-height:50px;
+	float:left;
+	width:100px;
+	
+	
+}
+#navbar ul li a{
+	text-decoration:none;
+	color:white;
+	display:block;
+	
+	
+}
+#navbar ul li a:hover {
+	background-color:brown;
+     border-radius:5px;
+     }
+
+.container{
+	width:1100px;
+	margin:0 auto;
+}
+
+.side{
+	background-color:white;
+	margin-top:5px;
+	height:500px;
+	width: 600px
+	padding:10px;
+background-color:aliceBlue;
+border-radius: 5px;
+background: aliceBlue;
+-webkit-box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    3px 3px 10px 0px rgba(50, 50, 50, 0.75);
+box-shadow:         3px 3px 10px 0px black;	
+	
+	
+}
+.side form div {
+background: aliceBlue;
+font-size:18px;
+    text-shadow: 1px 1px navy;
+	color:black;
+}
+
+.side form input {
+background: aliceBlue;
+-webkit-box-shadow: 1px 1px 1px 0px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    1px 1px 1px 0px rgba(50, 50, 50, 0.75);
+box-shadow:         1px 1px 10px 0px black;
+}
+
+.side h2{
+
+color:maroon;
+	font-size:22px;
+	text-shadow: 1px 1px firebrick;
+	display: block;
+}
+
+.side form{
+	
+	font-size:16px;
+}
+.side button{
+color: black;
+font-size: 14px;
+padding: 6px;
+border-radius: 30px;
+background: aliceBlue;
+-webkit-box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    3px 3px 10px 0px rgba(50, 50, 50, 0.75);
+box-shadow:         3px 3px 10px 0px rgba(50, 50, 50, 0.75);
+
+
+}
+
+#footer{
+height:100px;
+width:100%;
+background-color:#fb4e54;	
+margin-top:10px;
+margin-bottom:5px;	
+}
+</style>
+<head>
+<title>Aryal Hotel</title>
+</head>
+
+<body>
+<marquee><font color="red"size="4">Aryal Hotel</font></marquee>
+<header>
+	<div>
+		<center><img src="logo.jpg" height="80" width="400" align="left" />
+<p style="text-align:right" height="80">Contact No: 9846365061<br/>Gmail: aryalsagar63@gmail.com</p>
+<br>
+
+	</div>
+</header>
+<body>
+   <div id="navbar">
+				<div id="con">
+                        <ul>
+                  <li><a href="home.html">Home</a></li>
+                   <li><a href="services.html">Services</a></li>
+                    <li><a href="booking.html">Book Now</a></li>
+                      <li><a href="Gallary.html">Gallary</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                               
+              </ul>
+                </div> 
+				</div> 
+					<div class="side">
+								<marquee behavior="alternate"><h2> Online Booking</h2> </Marquee>
+							<hr>
+
+							<form align="Center" name="f1" method="post" action=" ">
+							<div><b>Name:</b></div><input placeholder="enter your valid name" type="text" name="fname"/><br><br>
+							<div><b>Address:</b></div><input placeholder="enter your address" type="text" name="faddress"/><br><br>
+							<div><b>Phone_no.:</b></div><input placeholder="enter ph no (10digit)" type="text" name="fphone_no"/><br><br>
+							<div><b>Email:</b></div><input placeholder="abc.@gmail.com" type="text" name="femail"/><br><br>
+							<div><b>No of guest:</b></div><input placeholder="5" type="number" name="fperson"/><br><br>
+							<div><b>Room Name</b></div><input placeholder="Which Room?" type="text" name="froom"/><br><br>
+
+
+							<button type="submit" value="Submit" onclick="return validate()"><b>&nbsp; Submit &nbsp;<b></button>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							 <button type="reset" value="Reset"><b>&nbsp;&nbsp;Reset&nbsp;&nbsp;</b></button>
+
+							 
+							</form>
+							<script type="text/javascript">
+							function validate()
+							{
+								var uname=document.f1.fname.value;	
+								var uaddress=document.f1.faddress.value;	
+								var uphone=document.f1.fphone_no.value;	
+								var uemail=document.f1.femail.value;
+								var uperson=document.f1.fperson.value;
+								var uroom=document.f1.froom.value;
+								
+								var ptname =/^[A-Z a-z]{3,20}$/;
+								var ptadd =/^[A-Z a-z 0-9 ,]{5,50}$/;
+								var ptph =/^[0-9]{10}$/;
+							    var ptemail =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+								var ptperson =/^[0-9]$/;
+								var ptroom=/^[A-Z a-z 0-9 -]{3,50}$/;
+								
+								var rtname= ptname.test(uname);
+								var radd= ptadd.test(uaddress);
+								var rph= ptph.test(uphone);
+								var remail= ptemail.test(uemail);
+								var rperson= ptperson.test(uperson);
+								var rroom= ptroom.test(uroom);
+								
+							    if(uname=="")
+								{
+									alert("you forget to enter your name");
+									return false;
+								}
+								if(rtname==false)
+								{
+									alert("invalid name");
+									return false;
+								}
+								
+								
+								if(uaddress=="")
+								{
+									alert("you forget to enter your address");
+									return false;
+								}
+								if(radd==false)
+								{
+									alert("invalid entry of address");
+									return false;
+								}
+								
+								if(uphone=="")
+								{
+									alert("You forget to enter your PH number");
+									return false;
+								}
+								if(rph==false)
+								{
+									alert("invalid entry of phone number");
+									return false;
+								}
+								
+								if(uemail=="")
+								{
+									alert("You forget to enter your email address");
+									return false;
+								}
+								if(remail==false)
+								{
+									alert("invalid entry of email");
+									return false;
+								}
+								
+								if(uperson=="")
+								{
+									alert("you forget to enter your guest group");
+									return false;
+								}
+								if(rperson==false)
+								{
+									alert("invalid entry of faculty");
+									return false;
+								}
+								
+								if(uroom=="")
+								{
+									alert("you forget to select your room name");
+									return false;
+								}
+								if(rtrm==false)
+								{
+									alert("invalid entry of room");
+									return false;
+								}
+								else{
+									return true;
+								}
+								
+								
+								
+							}
+							</script>
+</div>
+<br>
+</div>
+
+<hr color="brown" size="5">
+<hr color="brown">
+
+
+<div id="footer">                     
+	<center>
+
+Home |<a href="services.html">Services</a>| <a href="Onlinebooking.html">Book Now</a> |<a href="">Gallary </a>|<a href="contactus.html">Contact us</a> </center>
+<p><center>&copy COPYRIGHT 2018 BY Aryal Hotel - ALL RIGHTS RESERVED</p>
+</div>
+
+
+</body> 
+</html>
+
